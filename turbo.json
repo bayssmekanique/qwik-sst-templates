@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local"
+  ],
+  "globalDotEnv": [
+    ".env"
+  ],
+  "pipeline": {
+    "build": {
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "deploy": {
+      "cache": false
+    },
+    "remove": {
+      "cache": false
+    },
+    "lint": {},
+    "fmt": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
